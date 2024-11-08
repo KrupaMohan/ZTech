@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.files-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+/* Search bar styles */
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* Table styles */
+.files-table {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.table-header {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.875rem;
+    color: #666;
+    background-color: #f8f9fa;
+}
+
+.table-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+/* Cell styles */
+.checkbox-cell {
+    width: 40px;
+}
+
+.name-cell {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.date-cell {
+    width: 150px;
+}
+
+.views-cell {
+    width: 100px;
+}
+
+.favorites-cell {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.contributors-cell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-cell, .actions-cell {
+    width: 50px;
+    text-align: center;
+}
+
+/* Folder styles */
+.folder-icon {
+    color: #1a73e8;
+    font-size: 1.25rem;
+}
+
+.folder-name {
+    font-weight: 500;
+}
+
+.items-count {
+    font-size: 0.75rem;
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+/* Avatar styles */
+.avatar {
+    width: 28px;
+    height: 28px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+/* Icons */
+.fa-star {
+    color: #666;
+}
+
+.fa-ellipsis-v {
+    color: #666;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .views-cell,
+    .favorites-cell {
+        display: none;
+    }
+    
+    .date-cell {
+        width: 100px;
+    }
+    
+    .contributors-cell span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-cell {
+        display: none;
+    }
+    
+    .contributors-cell {
+        width: 40px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1e2d69;
+    font-weight: 500;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #1e2d69;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+}

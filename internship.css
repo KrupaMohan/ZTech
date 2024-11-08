@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f5f5f5;
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-bet;
+    align-items: center;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 20px; */
+  }
+  .text{
+    margin-right: 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #1e2d69; /* Adjust this color for your brand */
+    font-weight: 500;
+    padding: 8px;
+    transition: color 0.3s;
+  }
+  
+  
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #1e2d69;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .nav-links a:hover,
+  .nav-links .active {
+    color: #e74c3c; /* Active/hover color */
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide for mobile version */
+        flex-direction: column;
+    }
+  }
+  .hero-section {
+    background: url('building.webp') ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 100px 20px;
+    color: #1e2d69;
+    position: relative;
+  }
+  
+  .hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+    border-left: 5px solid #1e2d69;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .hero-buttons .learn-more {
+    background-color: #1e2d69;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .hero-buttons .find-out-more {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .hero-buttons button:hover {
+    opacity: 0.8;
+  }
+  /* Add the Animate.css library */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+  
+  /* Customize the animation */
+  .animate__animated {
+    --animate-duration: 1s;
+    --animate-delay: 0.5s;
+  }
+  
+  .animate__fadeInUp {
+    --animate-delay: 0.3s;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 220px;
+    justify-content: center;
+    max-width: 12px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    max-width: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    row-gap: 120px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 50%;
+    height: 10px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .participants {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .join-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .join-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%;
+    }
+  }

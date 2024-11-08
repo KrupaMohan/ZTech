@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTERSOLIS INFOTECH</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sections-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .section-content {
+            padding: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #2a2f8e;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="text">MASTERSOLIS INFOTECH</h2>
+                <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MASTERSOLIS INFOTECH">
+            </div>
+            <ul class="nav-links">
+                <li><a href="./home.html" >Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="./products.html" class="active">Products</a></li>
+                <li><a href="/courses/course.html">Courses</a></li>
+                <li><a href="./internship.html">Internships</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blogs.html">Blogs</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="groups.html">Groups</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="account.html">My Account</a>
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dynamic Sections Container -->
+    <div class="sections-container" id="sectionsContainer"></div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="contact-info">
+            <div class="contact-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Tel: 944-0965-396</span>
+            </div>
+            <div class="contact-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email: masterroliainfotech@gmail.com</span>
+            </div>
+            <div class="contact-info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Hebbal, Bangalore, Karnataka, IN</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic content generation for section cards with links
+        const sectionsData = [
+            {
+                title: "DriveThru",
+                description: "An end-to-end site for managing the placement process.",
+                imageUrl: "https://static.wixstatic.com/media/nsplsh_2f694a69690b4d64930208c29d2decea~mv2.jpg/v1/fill/w_358,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_fd5c21cdc57f4b19b00f8ec0988396fe_.jpg",
+                link: "drive.html"
+            },
+            {
+                title: "Payroll System",
+                description: "This system enables accounts departments to handle payments with ease by automating pay receipts",
+                imageUrl: "https://static.wixstatic.com/media/11062b_e05acc7c03f14ea78356b79b829b757c~mv2.jpg/v1/fill/w_358,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_fd5c21cdc57f4b19b00f8ec0988396fe_.jpg",
+                link: "payroll.html"
+            },
+            {
+                title: "Attendance Module",
+                description: "This Plugin is built to integrate with existing sites to collect staff attendance in centralized repo",
+                imageUrl: "https://static.wixstatic.com/media/11062b_1bae4c1b9e17401eb83214230196c28c~mv2.jpg/v1/fill/w_358,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_fd5c21cdc57f4b19b00f8ec0988396fe_.jpg",
+                link: "attendance.html"
+            }
+        ];
+
+        const sectionsContainer = document.getElementById('sectionsContainer');
+
+        sectionsData.forEach(section => {
+            const sectionCard = document.createElement('a');
+            sectionCard.classList.add('section-card');
+            sectionCard.href = section.link;
+
+            sectionCard.innerHTML = `
+                <img src="${section.imageUrl}" alt="${section.title}" class="section-image">
+                <div class="section-content">
+                    <h2 class="section-title">${section.title}</h2>
+                    <p class="section-description">${section.description}</p>
+                </div>
+            `;
+            sectionsContainer.appendChild(sectionCard);
+        });
+    </script>
+</body>
+</html>

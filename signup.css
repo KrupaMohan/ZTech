@@ -1,0 +1,156 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: white;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signup-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"],
+.signup-container input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.signup-container input.invalid {
+    border-color: red;
+}
+
+.signup-container input.valid {
+    border-color: green;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.signup-container button.enabled {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.signup-container button:hover {
+    background-color: #555;
+}
+
+.login-link {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content a {
+    color: rgb(0, 0, 0);
+}
+
+.dropdown-content a:hover {
+    background-color: #6a6868;
+    color: blue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MASTERSOLIS INFOTECH</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            background-image: url('https://st2.depositphotos.com/2714617/8216/i/450/depositphotos_82164860-stock-photo-contact-global-concept-top-view.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.7); 
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: blue; 
+        }
+
+        
+        .contact-form input:valid, .contact-form textarea:valid {
+            border-color: #4CAF50; 
+        }
+
+        .contact-form input:invalid, .contact-form textarea:invalid {
+            border-color: #f44336; 
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            opacity: 0.6; 
+            pointer-events: none; 
+        }
+
+        .contact-form button.enabled {
+            opacity: 1; 
+            pointer-events: auto; 
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049; 
+        }
+
+        
+        .success-message {
+            text-align: center;
+            margin-top: 20px;
+            color: #4CAF50;
+            font-size: 1.2em;
+        }
+
+        
+        header .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        header .logo h2 {
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a.active {
+            text-decoration: underline;
+        }
+
+        .dropdown-content a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="text">MASTERSOLIS INFOTECH</h2>
+                <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MASTERSOLIS INFOTECH">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="./courses/course.html">Courses</a></li>
+                <li><a href="./internship.html">Internships</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blogs.html">Blogs</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="groups.html">Groups</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="account.html">My Account</a>
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="contact-form-section">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" 
+                       pattern="[A-Za-z\s]{3,}" title="Name must contain at least 3 alphabetic characters" oninput="validateForm()">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
+                       pattern="\d{10}" title="Phone number must be exactly 10 digits" oninput="validateForm()">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email"
+                       pattern="[a-zA-Z0-9._%+-]+@gmail\.com" title="Email must be in the format example@gmail.com" oninput="validateForm()">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your message" oninput="validateForm()"></textarea>
+
+                <button type="button" id="submit-button" onclick="submitForm()">Send Message</button>
+            </form>
+
+            
+            <div id="success-message" class="success-message" style="display: none;">Your message has been submitted!</div>
+        </div>
+    </section>
+
+    <script>
+        
+        function validateForm() {
+            let name = document.getElementById('name');
+            let phone = document.getElementById('phone');
+            let email = document.getElementById('email');
+            let message = document.getElementById('message');
+            let button = document.getElementById('submit-button');
+
+            
+            if (name.validity.valid && phone.validity.valid && email.validity.valid && message.validity.valid) {
+                button.classList.add('enabled'); 
+                button.disabled = false;
+            } else {
+                button.classList.remove('enabled'); 
+                button.disabled = true;
+            }
+        }
+
+        
+        function submitForm() {
+            let successMessage = document.getElementById('success-message');
+            let button = document.getElementById('submit-button');
+            
+            
+            if (document.getElementById('contact-form').checkValidity()) {
+                successMessage.style.display = 'block'; 
+                button.disabled = true; 
+                button.classList.remove('enabled'); 
+                setTimeout(() => {
+                    successMessage.style.display = 'none'; 
+                }, 5000);
+            }
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', validateForm);
+    </script>
+</body>
+</html>

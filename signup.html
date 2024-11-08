@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterSolis InfoTech - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="singin.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="text">MASTERSOLIS INFOTECH</h2>
+                <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MASTERSOLIS INFOTECH">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="/services.html">Our Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="/courses/course.html">Courses</a></li>
+                <li><a href="internship.html">Internships</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blogs.html">Blogs</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="groups.html">Groups</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="account.html">My Account</a>
+                        <a href="signup.html">SignUp</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <p>Join us at MasterSolis InfoTech and unlock new possibilities.</p>
+        
+        <form id="signupForm">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required pattern="^[A-Za-z]{3,}$" title="First name must be at least 3 alphabetic characters" oninput="validateForm()">
+            <div id="firstNameError" class="error-message"></div>
+
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required pattern="^[A-Za-z]+$" title="Last name must only contain alphabetic characters" oninput="validateForm()">
+            <div id="lastNameError" class="error-message"></div>
+
+            <input type="email" id="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com" title="Email must be in the format example@gmail.com" oninput="validateForm()">
+            <div id="emailError" class="error-message"></div>
+
+            <input type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%*?&]{10,}$" title="Password must be at least 10 characters and contain at least one letter, one number, and one special character" oninput="validateForm()">
+            <div id="passwordError" class="error-message"></div>
+
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required pattern="^\d{10}$" title="Mobile number must be exactly 10 digits" oninput="validateForm()">
+            <div id="mobileError" class="error-message"></div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required onchange="validateForm()">
+                <label for="terms">I agree to the <a href="terms.html">Terms & Conditions</a></label>
+            </div>
+            <div id="termsError" class="error-message"></div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="newsletter" name="newsletter" onchange="validateForm()">
+                <label for="newsletter">Subscribe to our newsletter</label>
+            </div>
+
+            <button type="submit" id="registerBtn" class="enabled" disabled>Register</button>
+        </form>
+
+        <a href="login.html" class="login-link">Already a member? Log in</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

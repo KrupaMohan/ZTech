@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MASTERSOLIS INFOTECH</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://t4.ftcdn.net/jpg/07/23/29/41/360_F_723294151_xl9nkxrmWTUgpmdEIXBQu6j2iE9wqoSN.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar ul li a.active {
+            font-weight: bold;
+            color: #212289;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-content {
+            display: none;
+            background-color: #fff; /* White background */
+            color: black; /* Default black text */
+            position: absolute;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black; /* Black text */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Hover effect for dropdown */
+        .dropdown:hover .dropdown-content a {
+            background-color: rgb(255, 255, 255); 
+            color: black; /* Text remains black */
+        }
+
+        /* Login Section */
+        .login-section {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            width: 100%;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .login-container button {
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .login-container button:hover {
+            background-color: #555;
+        }
+
+        .login-container .new-user {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .login-container .new-user a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .login-container .new-user a:hover {
+            text-decoration: underline;
+        }
+
+        /* Password visibility toggle */
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        /* Error message */
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 10px;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+        }
+
+        .error-message.show {
+            height: auto;
+        }
+
+        /* Forgot Password Link */
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .forgot-password a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2 class="text">MASTERSOLIS INFOTECH</h2>
+            <img src="https://static.wixstatic.com/media/66b930_db1d91061a2c4cd8bad3a619207b9f74~mv2.jpg/v1/fill/w_138,h_90,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Screenshot%202023-12-07%20205436_edited.jpg" alt="MASTERSOLIS INFOTECH">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="groups.html">Groups</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="account.html">My Account</a>
+                    <a href="signup.html">SignUp</a>
+                    <a href="login.html" class="active">Login</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to MASTERSOLIS INFOTECH</h2>
+            
+            <!-- Login Form -->
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <span class="password-toggle" onclick="togglePassword()">👁</span>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-message"></div>
+            
+            <button onclick="window.location.href='home.html'">Login</button>
+
+
+            <!-- New User Section -->
+            <div class="new-user">
+                <p>New to MASTERSOLIS? <a href="signup.html">Register here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MASTERSOLIS INFOTECH. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to handle login logic
+        function login() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+            
+            // Gmail validation
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = "Please enter a valid Gmail address.";
+                errorMessage.classList.add('show');
+                return;
+            }
+
+            // Password length validation (must be at least 10 characters)
+            if (password.length < 10) {
+                errorMessage.textContent = "Password incorrect.";
+                errorMessage.classList.add('show');
+                return;
+            }
+
+            // If everything is valid
+            alert("Login successful");
+            // Redirect or proceed with further login logic
+        }
+
+        // Toggle password visibility
+        function togglePassword() {
+            var passwordField = document.getElementById('password');
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
